@@ -1,11 +1,76 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin: 0; padding: 0; overflow: hidden;">
-    <iframe src="https://app.chatgptbuilder.io/bots/1868068/sw/?url=&color=%23E1162A" frameborder="0" style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-</body>
+<html>
+  <head>
+    <title>Learning Platform Container</title>
+    <style>
+      body {
+        background-color: #FFFFFF;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #0072C6;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 36px;
+        margin-top: 0;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        text-align: center;
+      }
+      .report-area {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .login-area {
+        margin-top: 50px;
+        text-align: center;
+      }
+      input[type="password"] {
+        width: 150px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #0072C6;
+        border-radius: 5px;
+        outline: none;
+      }
+      input[type="submit"] {
+        padding: 10px;
+        background-color: #0072C6;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Excellence Assured</h1>
+      <p>Welcome to our learning platform. Our courses are designed to help you achieve your goals and succeed in your career.</p>
+      <div class="login-area">
+        <form onsubmit="return checkPassword();">
+          <input type="password" id="password" placeholder="Enter your password"><br>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+      <div id="chatbot-container" style="display: none; text-align: center;">
+        <iframe id="chatbot" src="https://app.chatgptbuilder.io/bots/1868068/sw/?url=&color=%23E1162A" style="border: none; width: 80%; height: 700px;"></iframe>
+      </div>
+      <div class="report-area">
+        <p>Submit your progress report via email copy and paste your course outline and daily progress:</p>
+        <form action="mailto:example@example.com" method="post" enctype="text/plain">
+          <textarea name="progress-report" rows="5" cols="50" placeholder="Write your progress report here..."></textarea><br>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
